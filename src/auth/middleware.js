@@ -46,7 +46,7 @@ module.exports = (req, res, next) => {
       // return Promise.resolve();
     } else {
       console.log('no user!');
-      _authError();
+      return _authError();
     }
   }
 

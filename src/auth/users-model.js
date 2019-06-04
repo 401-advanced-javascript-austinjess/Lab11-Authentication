@@ -44,7 +44,8 @@ users.methods.comparePassword = function(password) {
     bcrypt
       .compare(password, this.password)
       // the passwords are being compared correctly, I think
-      .then((res) => console.log(res))
+      // .then((res) => console.log(res))
+      .then((valid) => (valid ? this : null))
   );
 };
 

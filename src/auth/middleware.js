@@ -10,7 +10,6 @@ module.exports = (req, res, next) => {
 
     switch (authType.toLowerCase()) {
     case 'basic':
-      console.log('BASIC!!!!!!!!!!!!!!!!!!!');
       return _authBasic(encodedString);
     default:
       return _authError();
@@ -44,6 +43,7 @@ module.exports = (req, res, next) => {
       req.token = user.generateToken();
       console.log({ token: req.token });
       next();
+      // return Promise.resolve();
     } else {
       console.log('no user!');
       _authError();
@@ -56,5 +56,6 @@ module.exports = (req, res, next) => {
       statusMessage: 'Unauthorized',
       message: 'Invalid User ID/Password',
     });
+    return Promise.resolve();
   }
 };

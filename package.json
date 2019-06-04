@@ -38,5 +38,8 @@
   "bugs": {
     "url": "https://github.com/401-advanced-javascript-austinjess/lab11-authentication/issues"
   },
-  "homepage": "https://github.com/401-advanced-javascript-austinjess/lab11-authentication#readme"
+  "homepage": "https://github.com/401-advanced-javascript-austinjess/lab11-authentication#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
 }
